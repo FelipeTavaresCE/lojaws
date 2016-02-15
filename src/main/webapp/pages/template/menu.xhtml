@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:body>
+    <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Cadastro Básico<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/colaborador/List.xhtml">Servidor e Estagiários</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/colaborador_terc/List.xhtml">Terceirizados</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/telefone/List.xhtml">Telefones</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/veiculo/List.xhtml">Veiculo</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/material_consumo/List.xhtml">Material Consumo</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/rateio_modo/List.xhtml">Rateio Modo</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/natureza_despesa/List.xhtml">Natureza Despesa</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/cadastros_basicos/acao/List.xhtml">Ação</a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Movimento Mensal<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/notaempenho/consomews.xhtml">Baixar Notas</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/movimentomensal/pesquisaNotaSeguro.xhtml">Altera Nota Seguro</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/movimentomensal/arquivoMensal.xhtml">Preparar Arquivo Mensal</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/notaempenho/rateio.xhtml?modo=inicial">Calcula Qtd Pesosas Setor</a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Rateio<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/notaempenho/rateio.xhtml?modo=inicial">Rateio Manual</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/materialConsumo.xhtml">Consumo Material</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/estagiario.xhtml">Estagiário</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/telefone.xhtml">Telefone</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/tercerizado.xhtml">Tercerizado</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/servidor.xhtml">Servidor</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/correio.xhtml">Correio</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/rateios/veiculo.xhtml">Veículo</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Consultas<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/consultas/despesa_rateada.xhtml">Desp. Rateadas</a>
+                </li>
+                <li>
+                    <a href="#{facesContext.externalContext.requestContextPath}/pages/consultas/notas.xhtml">Nota de Empenho</a>
+                </li>
+            </ul>
+        </li>
+        <!--<li class="dropdown">-->
+            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+               <!--aria-expanded="false">Relatório<span class="caret"></span></a>-->
+            <!--<ul class="dropdown-menu">-->
+                <!--<li>-->
+                <!--<a href="#{facesContext.externalContext.requestContextPath}/pages/notaempenho/rateio.xhtml?modo=inicial">Desp. Rateadas</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#{facesContext.externalContext.requestContextPath}/pages/notaempenho/rateio.xhtml?modo=inicial">Nota de Empenho</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+
+    </ul>
+</h:body>
+
+</html>

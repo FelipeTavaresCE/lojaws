@@ -1,30 +1,42 @@
 package br.com.ws.loja.model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by felipe.tavares on 20/01/16.
  */
+@Entity
+@Table(name = "tb_produto", schema = "lojaws")
 public class Produto {
 
-    private double preco;
-    private String nome;
+    @Id
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "SQ_GENERATOR"
+    )
     private Long id;
-    private int quantidade;
 
-    public Produto(double preco, String nome, Long id, int quantidade) {
+    private Double preco;
+    private String nome;
+    private Integer quantidade;
+
+    @ManyToOne
+    private List<Carrinho> carrinhos = new ArrayList<Carrinho>();
+
+    public Produto(Double preco, String nome, Long id, int quantidade) {
         this.preco = preco;
         this.nome = nome;
         this.id = id;
         this.quantidade = quantidade;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -44,11 +56,11 @@ public class Produto {
         this.id = id;
     }
 
-    public int getQuantidade() {
+    public Integer getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
 }

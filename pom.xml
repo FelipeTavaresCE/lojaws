@@ -8,6 +8,63 @@
     <artifactId>lojaws</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>dd/MM/yyyy HH:mm:ss</maven.build.timestamp.format>
+
+        <!-- Banco de dados -->
+        <hibernate-connection-url>jdbc:postgresql://localhost:5432/postgres</hibernate-connection-url>
+        <hibernate-connection-username>postgres</hibernate-connection-username>
+        <hibernate-connection-password></hibernate-connection-password>
+        <hibernate-hbm2ddl-auto>update</hibernate-hbm2ddl-auto>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+
+        <!--<profile>-->
+            <!--<id>test</id>-->
+            <!--<properties>-->
+                <!--&lt;!&ndash; Banco de dados &ndash;&gt;-->
+                <!--<hibernate-connection-url>jdbc:postgresql://172.18.0.17:5432/arcebd</hibernate-connection-url>-->
+                <!--<hibernate-connection-username>postgres</hibernate-connection-username>-->
+                <!--<hibernate-connection-password>arce178</hibernate-connection-password>-->
+                <!--<hibernate-hbm2ddl-auto>update</hibernate-hbm2ddl-auto>-->
+
+                <!--&lt;!&ndash; Servidor de Deploy &ndash;&gt;-->
+                <!--<deploy.url>http://172.18.0.17:80/manager/text</deploy.url>-->
+                <!--<deploy.user>desenv</deploy.user>-->
+                <!--<deploy.password>arce01</deploy.password>-->
+            <!--</properties>-->
+        <!--</profile>-->
+
+        <!--<profile>-->
+            <!--<id>product</id>-->
+            <!--<properties>-->
+                <!--&lt;!&ndash; Banco de dados &ndash;&gt;-->
+                <!--<hibernate-connection-url>jdbc:postgresql://172.18.0.28:5432/arcebd</hibernate-connection-url>-->
+                <!--<hibernate-connection-username>postgres</hibernate-connection-username>-->
+                <!--<hibernate-connection-password>pg178#28</hibernate-connection-password>-->
+                <!--<hibernate-hbm2ddl-auto>update</hibernate-hbm2ddl-auto>-->
+
+                <!--&lt;!&ndash; Servidor de Deploy &ndash;&gt;-->
+                <!--<deploy.url>http://172.18.0.37:80/manager/text</deploy.url>-->
+                <!--<deploy.user>producao</deploy.user>-->
+                <!--<deploy.password>arce01</deploy.password>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    </profiles>
+
+
     <dependencies>
     <!-- JAX-RS -->
         <dependency>
@@ -30,11 +87,11 @@
             <version>2.22.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>all-themes</artifactId>
-            <version>1.0.10</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.primefaces.themes</groupId>-->
+            <!--<artifactId>all-themes</artifactId>-->
+            <!--<version>1.0.10</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
@@ -389,11 +446,11 @@
         </dependency>
 
         <!-- Componentes de software para o domínio de negócios do Brasil -->
-        <dependency>
-            <groupId>org.jrimum</groupId>
-            <artifactId>jrimum-bopepo</artifactId>
-            <version>0.2.3-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.jrimum</groupId>-->
+            <!--<artifactId>jrimum-bopepo</artifactId>-->
+            <!--<version>0.2.3-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <!-- End Componentes de software para o domínio de negócios do Brasil -->
 
     </dependencies>

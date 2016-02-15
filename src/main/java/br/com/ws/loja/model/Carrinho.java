@@ -18,7 +18,10 @@ public class Carrinho {
             generator = "SQ_GENERATOR"
     )
     private Long id;
+
+    @OneToMany
     private List<Produto> produto = new ArrayList<Produto>();
+
     private String rua;
     private String cidade;
 
